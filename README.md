@@ -2,11 +2,14 @@
 
 Official implementation of "[Summarizing Stream Data for Memory-Restricted Online Continual Learning](https://arxiv.org/abs/2305.16645)"
 
-## Abstract
 
-Replay-based methods have proved their effectiveness on online continual learning by rehearsing past samples from an auxiliary memory. With many efforts made on improving training schemes based on the memory, however, the information carried by each sample in the memory remains under-investigated. Under circumstances with restricted storage space, the informativeness of the memory becomes critical for effective replay. Although some works design specific strategies to select representative samples, by only employing original images, the storage space is still not well utilized. To this end, we propose to Summarize the knowledge from the Stream Data (SSD) into more informative samples by distilling the training characteristics of real images. Through maintaining the consistency of training gradients and relationship to the past tasks, the summarized samples are more representative for the stream data compared to the original images. Extensive experiments are conducted on multiple online continual learning benchmarks to support that the proposed SSD method significantly enhances the replay effects. We demonstrate that with limited extra computational overhead, SSD provides more than 3% accuracy boost for sequential CIFAR-100 under extremely restricted memory buffer.
+<p align="center"><img src="./figs/pipeline-ssd.png" align="center" width="750"></p>
 
-![pipeline](figs/pipeline-ssd.png)
+## Highlights :sparkles:
+- SSD is accepted by AAAI 2024!
+- SSD summarizes the knowledge in the stream data into informative images for the replay memory. 
+- Through maintaining the consistency of training gradients and relationship to the past tasks, the summarized samples are more representative for the stream data compared with original images. 
+- SSD significantly enhances the replay effects for online continual learning methods with limited extra computational overhead.
 
 ## Datasets
 
