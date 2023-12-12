@@ -36,14 +36,6 @@ if __name__ == "__main__":
     parser.add_argument('--seed', dest='seed', default=0, type=int,
                         help='Random seed')
     parser.add_argument('--tag', default='test', type=str)
-    parser.add_argument('--queue_size', default=64, type=int)
-    parser.add_argument('--summarize_interval', default=6, type=int)
-    parser.add_argument('--match', default='grad', type=str)
-    parser.add_argument('--metric', default='mse', type=str)
-    parser.add_argument('--lr_img', default=2e-4, type=float)
-    parser.add_argument('--mem_weight', default=1, type=float)
-    parser.add_argument('--mem_sim_num', default=10, type=int)
-    parser.add_argument('--mem_extra', default=1, type=int)
     parser.add_argument('--logs_dir', default='./logs', type=str)
 
     ########################Misc#########################
@@ -114,6 +106,24 @@ if __name__ == "__main__":
     parser.add_argument('--online', dest='online', default=True,
                         type=boolean_string,
                         help='If False, offline training will be performed (default: %(default)s)')
+
+    ########################SSD########################
+    parser.add_argument('--queue_size', default=64, type=int,
+                        help='Number of images in the queue for information summarizing')
+    parser.add_argument('--summarize_interval', default=6, type=int,
+                        help='Interval between iterations that summarizing is conducted')
+    parser.add_argument('--match', default='grad', type=str, choices=['grad', 'feat', 'grad_feat'],
+                        help='The matching target between real and synthesized images')
+    parser.add_argument('--metric', default='mse', type=str,
+                        help='The distance metric')
+    parser.add_argument('--lr_img', default=2e-4, type=float,
+                        help='The learning rate for updating images that are being summarized')
+    parser.add_argument('--mem_weight', default=1, type=float,
+                        help='The weight for relationship matching')
+    parser.add_argument('--mem_sim_num', default=10, type=int,
+                        help='Number of samples for calculating relationship distance')
+    parser.add_argument('--mem_extra', default=1, type=int,
+                        help='Whether the final loss is direct sum or weighted sum')
 
     ########################ER#########################
     parser.add_argument('--mem_size', dest='mem_size', default=10000,

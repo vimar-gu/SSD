@@ -24,7 +24,7 @@ Official implementation of "[Summarizing Stream Data for Memory-Restricted Onlin
 - Tiny-ImageNet: Download from http://cs231n.stanford.edu/tiny-imagenet-200.zip, place it in datasets/tiny-imagenet-200/, and suppress it into pickles
 
 ## Run commands
-Detailed descriptions of options can be found in [general_main.py](general_main.py)
+Detailed descriptions of options can be found in the `SSD` section in [general_main.py](general_main.py)
 
 ### Sample commands to run algorithms on Split-CIFAR100
 ```shell
