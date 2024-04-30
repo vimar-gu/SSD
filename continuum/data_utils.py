@@ -98,7 +98,7 @@ class BalancedSampler(data.Sampler):
         return iter(final_indices)
 
     def __len__(self):
-        return len(self.y) // batch_size
+        return len(self.y) // self.batch_size
 
 
 def setup_test_loader(test_data, params):

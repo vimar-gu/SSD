@@ -21,7 +21,7 @@ Official implementation of "[Summarizing Stream Data for Memory-Restricted Onlin
 ### Data preparation
 - CIFAR10 & CIFAR100 will be downloaded during the first run
 - Mini-ImageNet: Download from https://www.kaggle.com/whitemoon/miniimagenet/download, and place it in datasets/mini_imagenet/
-- Tiny-ImageNet: Download from http://cs231n.stanford.edu/tiny-imagenet-200.zip, place it in datasets/tiny-imagenet-200/, and suppress it into pickles
+- Tiny-ImageNet: Download from http://cs231n.stanford.edu/tiny-imagenet-200.zip, place it in datasets/tiny-imagenet-200/. Copy `process_tiny.py` to the directory and run it to suppress the dataset into pickles
 
 ## Run commands
 Detailed descriptions of options can be found in the `SSD` section in [general_main.py](general_main.py)
